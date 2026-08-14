@@ -1,0 +1,83 @@
+# Programming Languages | Animal Inheritance in Python
+# Imani Candler | 10.21.2024
+# Objective: Write a program with a Mammal class and 3 subspecies. Include descriptive
+# details about each mammal. Display to screen
+
+class Mammal: # mammal class represents generic animal
+    def _init_(self, species): # init accepts an argument for mammal's species
+        self._species = species
+
+    def show_species(self): # displays message indicating mammal's species
+        pass
+    
+    def make_sound(self): # mammal's way of making a generic sound
+        pass
+
+    def action(self): # mammal's way of doing a generic action
+        pass
+
+class Cat(Mammal): # SUBCLASS ONE
+    def show_species(self):
+        species = "cat"
+        print ("I am a", species)
+    def make_sound(self):
+        print ("Meow!")
+    def action(self):
+        print ("Chase!")
+    
+
+class Dog(Mammal): # SUBCLASS TWO
+    def show_species(self):
+        species = "dog"
+        print ("I am a", species)
+    def make_sound(self):
+        print ("Woof!")
+    def action(self):
+        print ("Run!")
+    
+class Bear(Mammal): #SUBCLASS THREE
+    def show_species(self):
+        species = "bear"
+        print ("I am a ", species)
+    def make_sound(self):
+        print ("Grrrr!")
+    def action(self):
+        print ("Climb!")
+
+class Spaniel(Dog): # SUBCLASS OF SUBCLASS DOG
+    def show_species(self):
+        species = "Cocker Spaniel"
+        print ("I am a", species)
+    def make_sound(self):
+        print ("Bark!")
+    def action(self):
+        print ("Eat!")
+
+# intitalize for subclasses & gives species name to Mammal superclass
+cat = Cat()
+dog = Dog()
+bear = Bear()
+spaniel = Spaniel()
+
+
+# prints attributes of subclasses
+print ("------ RESULTS ------")
+print ("\nCat Info")
+cat.show_species()
+cat.make_sound()
+cat.action()
+
+print ("\nDog Info")
+dog.show_species()
+dog.make_sound()
+dog.action()
+
+print ("\nBear Info")
+bear.show_species()
+bear.make_sound()
+bear.action()
+
+print ("\nCocker Spaniel Info") # subclass of Dog
+spaniel.show_species()
+spaniel.make_sound()
+spaniel.action()
